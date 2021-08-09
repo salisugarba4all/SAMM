@@ -1,0 +1,1624 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#"
+     xml:base="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CoMoDyMe="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe/1.0.0"/>
+        <rdfs:comment>A Knowledge model for decribing MWS Discovery in DME</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Request -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Request">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#canProvide -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#canProvide">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasActivePeriod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasActivePeriod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#endTime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#startTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasActivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCarbondioxide -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCarbondioxide">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCharacteristic">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasDeterminant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasDeterminant">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasDevice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isFeatureOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasIllumination -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasIllumination">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isMetricOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSMetric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasPreference -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasPreference">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UPreference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasProfile">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasTendency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasTendency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSTendency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isCharacteristicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isCharacteristicOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isComposedOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#CompositeP"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#AtomicP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isDetectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isDetectedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#GPS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isFeatureOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isLocatedIn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isMetricOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isMetricOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#isPartOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SoftDevice"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#performedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#performedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#ALocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#ALocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#AbsoluteLocn"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConCarbondioxide -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConCarbondioxide">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Carbondioxide"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConHumidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConHumidity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Humidity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConIllumination -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConIllumination">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Dust"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConNoise -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConNoise">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Noise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Temperature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConVisibility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#EnvConVisibility">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Visibility"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RelativeLocn"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SAvailability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SAvailability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Availability"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SCost">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Cost"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SDecription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SDecription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SLatency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SLatency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Latency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Rating"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SReliability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SReliability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Reliability"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SRespTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SRespTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#ResponseTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SSecurity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SSecurity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Security"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SUsability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SUsability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Usability"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInstant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInstant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Time"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInterval -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInterval">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Time"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Prof_Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UAge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Age"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UGender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Gender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UPreference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UPreference">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#CompositeP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#URole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#URole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Role"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#AbsoluteLocn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#AbsoluteLocn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Age -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Age">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Assembling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Assembling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Prof_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#AtomicP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#AtomicP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UPreference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Availability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Availability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Percentage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Battery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Battery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Browser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Browser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SoftDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#CPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#CPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Camera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Camera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Carbondioxide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Carbondioxide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#CompositeP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#CompositeP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UPreference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Cost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Cost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Currency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Negative_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Currency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Currency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Dock_worker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Dock_worker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Driving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Driving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Prof_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Dust -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Dust">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Emotional_Status -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Emotional_Status">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#FarmLand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#FarmLand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RelativeLocn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Farmer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Farmer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Female">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Gender"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#GPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#GPS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Gender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Health_Status -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Health_Status">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Healthy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Healthy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Health_Status"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Unhealthy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Hiking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Hiking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Pers_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Humidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Humidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Illumination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Illumination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Jogging -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Jogging">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Pers_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Laboratory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Laboratory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RelativeLocn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Lat-and-Long -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Lat-and-Long">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#AbsoluteLocn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Latency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Latency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Milliseconds"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Negative_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#LectureRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#LectureRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RelativeLocn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Male">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Gender"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Memory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Memory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Milliseconds -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Milliseconds">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Negative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Negative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Emotional_Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Negative_Ten -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Negative_Ten">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSTendency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Noise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Noise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#OS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#OS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SoftDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Office -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Office">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RelativeLocn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Percentage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Percentage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Pers_Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Pers_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Emotional_Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive_Ten -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive_Ten">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSTendency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Prof_Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Prof_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Pushing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Pushing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Prof_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSInfo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSInfo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSMetric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSMetric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSInfo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Cost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Reliability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#ResponseTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSTendency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSTendency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Range -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Range">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Range"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RelativeLocn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RelativeLocn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Reliability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Reliability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Percentage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#ResponseTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#ResponseTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Milliseconds"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Negative_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Restaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#RelativeLocn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Role">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Effect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Input"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Output"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Pre-condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Category">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Description -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Description">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Effect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Effect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Input -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Input">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Name">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Output -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Output">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Pre-condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#S_Pre-condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Screen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Screen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Percentage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Sitting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Sitting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Pers_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SoftDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#SoftDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Storage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Storage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Teaching -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Teaching">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Prof_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Throughput -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Throughput">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Milliseconds"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInstant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInstant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInterval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInterval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Typing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Typing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Pers_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UPreference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UPreference">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#UProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#URole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#URole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Unhealthy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Unhealthy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Health_Status"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Usability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Usability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#QoSParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Percentage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#hasMetric"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Positive_Ten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Visibility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Visibility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Wi-Fi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Wi-Fi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#HardDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#endTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#endTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#startTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#startTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#TimeInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment_Greenhouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment_Greenhouse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+        <EnvConCarbondioxide rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000</EnvConCarbondioxide>
+        <EnvConHumidity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</EnvConHumidity>
+        <EnvConIllumination rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70000</EnvConIllumination>
+        <EnvConTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</EnvConTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment_Outdoor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment_Outdoor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment_Recidence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment_Recidence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment_Shipyard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment_Shipyard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Environment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service_C02Generation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service_C02Generation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service_CareMessage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service_CareMessage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+        <SDecription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CareMessage allows healthcare providers to communicate with clients over text and mobile applications.</SDecription>
+        <SName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Care Message Alert</SName>
+        <SSecurity rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0</SSecurity>
+        <SUsability rdf:datatype="http://www.w3.org/2001/XMLSchema#double">95.0</SUsability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service_FittnessTracking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service_FittnessTracking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service_Lighting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service_Lighting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User_Agronomist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User_Agronomist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User_Farmer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User_Farmer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User_Patient -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User_Patient">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User_Worker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User_Worker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salisu-garba/ontologies/2019/10/CoMoDyMe#User"/>
+        <RLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automobile Assembly Plant</RLocation>
+        <UActivity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembling</UActivity>
+        <UAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</UAge>
+        <UDevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smartphone</UDevice>
+        <UGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</UGender>
+        <UPreference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-intrusive device</UPreference>
+        <URole rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Car Assembler</URole>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
